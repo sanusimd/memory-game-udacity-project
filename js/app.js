@@ -1,6 +1,6 @@
 
 // Array That Hold All Card Icons
-const icons = ["fa fa-diamond", "fa fa-diamond", "fa fa-paper-plane-o", "fa fa-paper-plane-o",
+let cards = ["fa fa-diamond", "fa fa-diamond", "fa fa-paper-plane-o", "fa fa-paper-plane-o",
     "fa fa-anchor", "fa fa-anchor", "fa fa-bolt", "fa fa-bolt", "fa fa-cube", "fa fa-cube",
     "fa fa-leaf", "fa fa-leaf", "fa fa-bicycle", "fa fa-bicycle", "fa fa-bomb", "fa fa-bomb"];
 
@@ -51,23 +51,24 @@ function shuffle(array) {
     return array;
 }
 
+// @description shuffle card
+cards = shuffle(cards);
+
 // @description First Click on card
 isFisrtClick = true;
 
 // @description Start The Game for First Time  
 function startGame() {
-    for (let i = 0; i < icons.length; i++) {
+    for (let i = 0; i < cards.length; i++) {
         const card = document.createElement("li");
         card.classList.add("card");
-        card.innerHTML = `<i class="${icons[i]}"></i>`
+        card.innerHTML = `<i class="${cards[i]}"></i>`
         cardParent.appendChild(card);
 
         // Call Event Click Function
         click(card)
     }
 
-    //Shuffle Cards
-    shuffle(icons)
 
 }
 
@@ -158,9 +159,8 @@ const starContainer = document.querySelector('.stars');
 const star = `<li><i class="fa fa-star"></i></li>`;
 
 starContainer.innerHTML = star + star + star;
-
 function rating() {
-
+ //check condition base number of moves
     if (moves > 8 && moves < 12) {
         starContainer.innerHTML = star + star
     } else if (moves > 13) {
@@ -170,15 +170,15 @@ function rating() {
 
 // @description Check if the Game is Over 
 function isOver() {
-    if (matchedCard.length === icons.length) {
+    if (matchedCard.length === cards.length) {
         //Stop Our Timer 
         stopTimer();
 
         // Congratulation function call  
         Congratulation();
-    }
+    };
 
-}
+};
 
 // @description Game Timer 
 let second = 0, minute = 0;
