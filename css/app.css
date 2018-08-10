@@ -145,7 +145,7 @@ h1 {
 	padding: 20px;
 	background: #ffffff;
 	border-radius: 5px;
-	width: 50%;
+    width: 40%;
 	position: relative;
 	transition: all 5s ease-in-out;
 	font-family: 'Gloria Hallelujah', cursive;
@@ -153,8 +153,10 @@ h1 {
   
 .popup h2 {
 	margin-top: 0;
-	color: #333;
-	font-family: Tahoma, Arial, sans-serif;
+    color: #02ccba;
+    font-size: 50px;
+    font-family: Tahoma, Arial, sans-serif;
+    text-align: center;
 }
 
 .popup .close {
@@ -169,7 +171,7 @@ h1 {
 }
 
 .popup .close:hover {
-	color: #E5F720;
+	color: #02ccba;
 }
 
 .popup .content-1,
@@ -189,7 +191,7 @@ h1 {
 }
 
 #play-again {
-	background-color: #141214;
+	background-color: #02ccba;
 	padding: 0.7rem 1rem;
 	font-size: 1.1rem;
 	display: block;
