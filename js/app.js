@@ -190,7 +190,7 @@ let timer = document.querySelector(".timer");
 let interval;
 function startTimer() {
     interval = setInterval(function () {
-        timer.innerHTML = minute + "mins " + second + "secs";
+        timer.innerHTML = minute + " mins " + second + " secs";
         second++;
         if (second == 60) {
             minute++;
@@ -247,7 +247,7 @@ function Congratulation() {
 
     //showing move, rating, time on modal
     document.getElementById('finalMove').innerHTML = moves;
-    document.getElementById('totalTime').innerHTML = minute + "mins" + second + "secs";
+    document.getElementById('totalTime').innerHTML = minute + " mins" + second + " secs";
     document.getElementById('starRating').innerHTML = starContainer.innerHTML;
 
     // closeIcon Modal
