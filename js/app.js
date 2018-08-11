@@ -55,7 +55,7 @@ function shuffle(array) {
 cards = shuffle(cards);
 
 // @description First Click on card
-isFisrtClick = true;
+isFirstClick = true;
 
 // @description Start The Game for First Time  
 function startGame() {
@@ -83,30 +83,33 @@ function click(card) {
     card.addEventListener('click', function () {
         // Start Timer on first click
         // checking the condition 
-        if (isFisrtClick) {
+        if (isFirstClick) {
             // start timer 
             startTimer();
 
             //change the condition
-            isFisrtClick = false;
+            isFirstClick = false;
         }
 
         // current and previous card variable
         const currentCard = this;
         const previousCard = openedCards[0];
 
+        if (openedCards.length === 0) {
+            card.classList.add('open', 'show', 'disable');
+            openedCards.push(this);
+        }
+
         if (openedCards.length === 1) {
+            console.log(currentCard.innerHTML, previousCard.innerHTML)
 
             card.classList.add('open', 'show', 'disable');
             openedCards.push(this);
 
             // compare the  two open card
             compare(currentCard, previousCard);
-
-        } else {
-            card.classList.add('open', 'show', 'disable');
-            openedCards.push(this);
         }
+        
     });
 }
 
@@ -171,11 +174,11 @@ function rating() {
 // @description Check if the Game is Over 
 function isOver() {
     if (matchedCard.length === cards.length) {
-        //Stop Our Timer 
-        stopTimer();
-
         // Congratulation function call  
         Congratulation();
+
+        //Stop Our Timer 
+        stopTimer();
     };
 
 };
@@ -203,9 +206,10 @@ function startTimer() {
 //reset timer
 function stopTimer() {
     //reset timer
-    var timer = document.querySelector(".timer");
-    timer.innerHTML = "0 mins 0 secs";
     clearInterval(interval);
+    minute = 0;
+    second = 0;
+    timer.innerHTML = minute + " mins " + second + " secs";
 
 };
 
@@ -213,6 +217,12 @@ function stopTimer() {
 restartBtn.addEventListener('click', function () {
     // reset all the cards and varible 
     resetCards();
+
+    //Shuffle Card 
+    shuffle(cards);
+
+   
+
 })
 
 /* @description Reset array and variable and Stop Timer 
@@ -230,6 +240,10 @@ function reset() {
 
     //Stop timer 
     stopTimer();
+    isFirstClick = true;
+    
+
+    
 
 };
 
