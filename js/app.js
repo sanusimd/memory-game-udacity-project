@@ -69,7 +69,6 @@ function startGame() {
         click(card)
     }
 
-
 }
 
 //
