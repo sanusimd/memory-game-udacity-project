@@ -233,7 +233,10 @@ restartBtn.addEventListener('click', function () {
 function reset() {
     // Reset matched card array 
     matchedCard = [];
-
+    
+    //Reset open card array  
+    openedCards = [];
+    
     //Reset Moves
     moves = 0;
     addMoves.innerHTML = moves;
