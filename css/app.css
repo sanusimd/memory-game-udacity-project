@@ -38,6 +38,8 @@ body {
 h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    font-size: 26px;
+    margin-top: 10px;
 }
 
 /*
@@ -45,8 +47,7 @@ h1 {
  */
 
 .deck {
-    width: 660px;
-    min-height: 680px;
+    width: 85%;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
     border-radius: 10px;
@@ -55,12 +56,13 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 3em;
+    margin: 20px 0 32px;
 }
 
 .deck .card {
-    height: 125px;
-    width: 125px;
+    height: 60px;
+    width: 55px;
+    margin: 2px;
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
@@ -97,9 +99,10 @@ h1 {
  */
 
 .score-panel {
-    text-align: left;
-    width: 345px;
+    text-align: center;
+    width: 280px;
     margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 .score-panel .stars {
@@ -209,6 +212,53 @@ h1 {
 	border-radius: 5px;
 }
 
-/* media query >>  Mobile Google Nexus 5 */
+/* media query  */
 
- 
+@media (min-width: 400) {
+	.deck {
+		width: 90%;
+	}
+	.deck .card {
+		height: 65px;
+        width: 65px;
+        margin: 2px;
+        
+	}
+}
+
+
+/* Media Query >> For Tablets and Larger screens
+****************/
+
+ @media (min-width: 768px) {
+	.container {
+		font-size: 22px;
+	}
+	.deck {
+		width: 660px;
+		height: 680px;
+	}
+	.deck .card {
+		height: 125px;
+		width: 125px;
+	}
+	.popup {
+		width: 60%;
+    }
+    
+    #starRating li {
+        display: inline-block;
+    }
+
+    .score-panel {
+        text-align: left;
+        width: 480px;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+
+    h1{
+        font-size: 32px;
+        font-weight: 600;
+    }
+} 
