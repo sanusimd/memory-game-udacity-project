@@ -296,11 +296,7 @@ function resetCards() {
     startGame();
 
     // Reset all the Variable 
-    reset();
-
-
-
-    
+    reset();   
 };
 
 
