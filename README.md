@@ -18,8 +18,8 @@ Link to Live Game Here [Memory Game] https://sanusimd.github.io/memory-game-udac
 ## How i Build the Memory Game
 
 Markup :   
-            I used javascript(Vanilla JS) to manipulate the DOM
-            I created a card container which holds all the cards and allow them to be shuffled when the game is refreshed.
-            I created a Move counter and a Timer, the counter starts when a pair of card
-            I created a star that indicate number of move to compensate the player based on the number of moves 
-            I create a pop-up  Modal for message when the player wins the game.
+        *I used javascript(Vanilla JS) to manipulate the DOM
+        *I created a card container which holds all the cards and allow them to be shuffled when the game is refreshed.
+        *I created a Move counter and a Timer, the counter starts when a pair of card
+        *I created a star that indicate number of move to compensate the player based on the number of moves 
+        *I create a pop-up  Modal for message when the player wins the game.
