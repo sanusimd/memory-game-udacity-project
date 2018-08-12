@@ -284,8 +284,7 @@ function closeModal() {
 function playAgain() {
     modal.classList.remove("show");
     // Reset Card ;
-    // resetCards();
-    startGame();
+      resetCards();  
 };
 
 // @desciption delete all card, restart game and  reset card
