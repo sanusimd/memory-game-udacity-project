@@ -222,7 +222,7 @@ restartBtn.addEventListener('click', function () {
     shuffle(cards);
 
    
-
+    
 })
 
 /* @description Reset array and variable and Stop Timer 
@@ -237,6 +237,9 @@ function reset() {
     //Reset Moves
     moves = 0;
     addMoves.innerHTML = moves;
+
+//reset rating star
+    starContainer.innerHTML = star + star + star;
 
     //Stop timer 
     stopTimer();
@@ -270,6 +273,7 @@ function Congratulation() {
 function closeModal() {
     closeIcon.addEventListener("click", function (e) {
         modal.classList.remove("show");
+        resetCards();
     });
 };
 
@@ -277,7 +281,8 @@ function closeModal() {
 function playAgain() {
     modal.classList.remove("show");
     // Reset Card ;
-    resetCards();
+    // resetCards();
+    startGame();
 };
 
 // @desciption delete all card, restart game and  reset card
@@ -290,6 +295,10 @@ function resetCards() {
 
     // Reset all the Variable 
     reset();
+
+
+
+    
 };
 
 
