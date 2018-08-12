@@ -9,11 +9,6 @@ html {
 }
 
 
-/* *::before,
-*::after {
-    box-sizing: inherit;
-} */
-
 html,
 body {
     width: 100%;
